@@ -9,6 +9,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">Articoli</a>
+        </li>
+
         @auth
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ciao, {{ Auth::user()->name }}</a>
@@ -25,20 +30,34 @@
         @else
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ciao, utente!</a> 
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" href="{{ route('login') }}">Accedi</a>
-                    </li>
+                <ul class="dropdown-menu"> 
+                  <li>
+                     <a class="dropdown-item" href="{{ route('login') }}">Accedi</a>
+                  </li>
 
-                    <hr class="dropdown-divider">
+                  <hr class="dropdown-divider">
 
-                    <li>
-                        <a class="dropdown-item" href="{{ route('register') }}">Registrati</a>
-                    </li>
+                  <li>
+                    <a class="dropdown-item" href="{{ route('register') }}">Registrati</a>
+                  </li>
                 </ul>
                 
             </li>
         @endauth
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+            <ul class="dropdown-menu">
+              @foreach ($categories as $category)
+                <li>
+                    <a class="dropdown-item text-capitalize" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                </li>
+                @if (!$loop->last)
+                  <hr class="dropdown-divider">
+                @endif
+              @endforeach
+            </ul>
+        </li>
       </ul>
     </div>
   </div>
