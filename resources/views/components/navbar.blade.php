@@ -11,7 +11,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">Articoli</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">{{ __('ui.allArticles') }}</a>
         </li>
 
         @auth
@@ -24,7 +24,7 @@
             </li>
           @endif
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ciao, {{ Auth::user()->name }}</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ __('ui.hello') }}, {{ Auth::user()->name }}</a>
             <ul class="dropdown-menu">
               <li>
                   <a class="dropdown-item" href="{{ route('create.article') }}">Crea</a>
@@ -76,6 +76,10 @@
         </div>
         
       </form>
+
+      <x-_locale lang="it" />
+      <x-_locale lang="en" />
+      <x-_locale lang="es" />
     </div>
   </div>
 </nav>
