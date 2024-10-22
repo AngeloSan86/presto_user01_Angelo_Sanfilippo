@@ -15,6 +15,11 @@
         </li>
 
         @auth
+          @if (Auth::user()->is_revisor)
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-succes btn-sm position-relative w-sm-25" href="{{ route('revisor.index') }}">Zona revisore</a>
+            </li>
+          @endif
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ciao, {{ Auth::user()->name }}</a>
             <ul class="dropdown-menu">
