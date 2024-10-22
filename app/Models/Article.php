@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Image;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -46,5 +48,10 @@ class Article extends Model
             'description'=>$this->description,
             'category'=>$this->category
         ];
+    }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class);
     }
 }
