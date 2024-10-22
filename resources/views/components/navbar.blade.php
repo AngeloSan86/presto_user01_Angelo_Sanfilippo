@@ -67,6 +67,15 @@
             </ul>
         </li>
       </ul>
+      <form class="d-flex" role="search" action="{{ route('article.search') }}" method="GET">
+        <div class="input-group">
+
+          <input type="search" name="query" class="form-control me-2"  placeholder="Search" aria-label="Search">
+          <button type="submit" class="input-group-test btn btn-outline-success" id="basic-adden2">Search</button>
+
+        </div>
+        
+      </form>
     </div>
   </div>
 </nav>
