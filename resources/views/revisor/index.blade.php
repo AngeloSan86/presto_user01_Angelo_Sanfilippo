@@ -20,11 +20,13 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
+
                         @for ($i = 0; $i < 6; $i++)
                             <div class="vol-12 col-md-4 mb-4 text-center">
                                 <img src="http://picsum.photos/300" class="img-fluid rounded shadow" alt="Immagine segnaposto">
                             </div>
                         @endfor
+
                     </div>
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">

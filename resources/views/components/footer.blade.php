@@ -42,12 +42,12 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>Vuoi diventare revisore?
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Clicca il bottone sottostante per inviae richiesta ai nostri amministratori.
           </p>
+          <a href="{{ route('become.revisor') }}" class="btn btn-success">Voglio diventare revisore</a>
         </div>
         <!-- Grid column -->
 
