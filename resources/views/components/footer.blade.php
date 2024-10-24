@@ -4,7 +4,7 @@
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
+      <span>{{ __('ui.textConnect') }}:</span>
     </div>
     <!-- Left -->
 
@@ -42,12 +42,12 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Vuoi diventare revisore?
+            <i class="fas fa-gem me-3"></i>{{ __('ui.textDoYouWantToBeRev') }}
           </h6>
           <p>
-            Clicca il bottone sottostante per inviae richiesta ai nostri amministratori.
+            {{ __('ui.textClickToBeRev') }}.
           </p>
-          <a href="{{ route('become.revisor') }}" class="btn btn-success">Voglio diventare revisore</a>
+          <a href="{{ route('become.revisor') }}" class="btn btn-success">{{ __('ui.textIWantBeRev') }}</a>
         </div>
         <!-- Grid column -->
 
