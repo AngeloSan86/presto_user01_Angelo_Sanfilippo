@@ -34,5 +34,15 @@ return [
     'refuse' => "Refuse",
     'accept' => "Accept",
     'noRev' => "No items to review",
-    'back' => "Back to"
+    'back' => "Back to",
+    'elettronica' => 'electronics',
+    'abbigliamento' => 'clothing',
+    'salute e bellezza' => 'health and beauty',
+    'casa e giardinaggio' => 'home and gardening',
+    'giocattoli' => 'toys',
+    'sport' => 'sports',
+    'animali domestici' => 'pets',
+    'libri e riviste' => 'books and magazines',
+    'accessori' => 'accessories',
+    'motori' => 'engines'
 ];

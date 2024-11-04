@@ -34,5 +34,15 @@ return [
     'refuse' => "Rifiuta",
     'accept' => "Accetta",
     'noRev' => "Nessun articolo da revisionare",
-    'back' => "Torna alla"
+    'back' => "Torna alla",
+    'elettronica' => 'elettronica',
+    'abbigliamento' => 'abbigliamento',
+    'salute e bellezza' => 'salute e bellezza',
+    'casa e giardinaggio' => 'casa e giardinaggio',
+    'giocattoli' => 'giocattoli',
+    'sport' => 'sport',
+    'animali domestici' => 'animali domestici',
+    'libri e riviste' => 'libri e riviste',
+    'accessori' => 'accessori',
+    'motori' => 'motori'
 ];
