@@ -54,9 +54,7 @@ class CreateArticleForm extends Component
 
     public function render()
     {
-        return view('livewire.create-article-form', [
-            'article' => $this->article,
-        ]);
+        return view('livewire.create-article-form');
     }
 
     public function updatedTemporaryImages()
