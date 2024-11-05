@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateArticleForm extends Component
 {
@@ -46,12 +48,15 @@ class CreateArticleForm extends Component
 
         session()->flash('success', 'Articolo creato correttamente');
         $this->cleanForm();
+
     }
 
 
     public function render()
     {
-        return view('livewire.create-article-form');
+        return view('livewire.create-article-form', [
+            'article' => $this->article,
+        ]);
     }
 
     public function updatedTemporaryImages()
