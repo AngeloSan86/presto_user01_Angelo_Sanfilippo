@@ -3,9 +3,14 @@
 namespace App\Jobs;
 
 use App\Models\Image;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
+
+
 
 class GoogleVisionSafeSearch implements ShouldQueue
 {
