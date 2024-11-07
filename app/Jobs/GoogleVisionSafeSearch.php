@@ -29,7 +29,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
         if (!$i) {
             return;
         }
-        $image = file_get_contents(storage_path('app/public/' . $image->path));
+        $image = file_get_contents(storage_path('app/public/' . $i->path));
 
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
@@ -63,6 +63,6 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $i->medical = $likelihoodName[$medical];
         $i->violence = $likelihoodName[$violence];
 
-        $image->save();
+        $i->save();
     }
 }
