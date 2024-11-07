@@ -14,7 +14,6 @@
     <div class="row vh-100 justify-content-center align-items-center">
         <div class="cpl-12 col md-6">
             <h1>Presto.it</h1>
-                <h2>Salve, come traduco i nomi delle categorie?</h2>
             <div class="my-3">
                 @auth
                     <a class="btn btn-dark" href="{{ route('create.article') }}">{{ __('ui.publArt') }}</a>
